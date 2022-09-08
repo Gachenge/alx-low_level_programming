@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * just to print some text
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
