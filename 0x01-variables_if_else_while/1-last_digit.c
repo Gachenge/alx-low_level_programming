@@ -9,7 +9,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-int ;
+int m,n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
  m = n % 10;
