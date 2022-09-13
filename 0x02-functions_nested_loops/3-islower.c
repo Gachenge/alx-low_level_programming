@@ -2,9 +2,11 @@
 
 /**
  * _islower - checks for lowercase character
- * c_islower: is it?
- * int c: entered from main function
- * Description: 'program'
+ *
+ * Description: 'checks the case'
+ *
+ * @c: input from main
+ *
  * Return: depends
  */
 
