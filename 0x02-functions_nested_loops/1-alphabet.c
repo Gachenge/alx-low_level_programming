@@ -1,17 +1,5 @@
 #include "main.h"
 /**
- * main - print the alphabet
- *
- * Return: nothing
- */
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-/**
  * print_alphabet - print small letters
  *
  * Return: none
