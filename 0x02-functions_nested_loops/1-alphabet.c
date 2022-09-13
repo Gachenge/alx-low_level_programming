@@ -9,6 +9,7 @@ void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();
+	return (0);
 }
 /**
  * print_alphabet - print small letters
@@ -17,7 +18,9 @@ int main(void)
  */
 void print_alphabet(void)
 {
-	for (int i = 'a'; i <= 'z'; i++)
+	int i;
+
+	for (i = 'a'; i <= 'z'; i++)
 	{
 		_putchar(i);
 	}
