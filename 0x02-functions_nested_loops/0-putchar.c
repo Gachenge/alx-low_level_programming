@@ -1,11 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - print a String
- *
- * Return: nothing
- */
+* main - print putchar
+*
+* Return: nothing
+*/
+
 int main(void)
 {
-	printf("_putchar\n");
+	int i;
+	char c;
+	char s[] = "_putchar";
+		for (i = 0; i <= 8; i++)
+		{
+			c = s[i];
+			_putchar(c);
+		}
 	return (0);
 }
