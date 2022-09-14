@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include "main.h"
 
 /**
  * jack_bauer - print all time od day
@@ -20,13 +20,12 @@ int i, j, k, l;
 		j = min % 10;
 		k = hr / 10;
 		l = hr % 10;
-		_putchar(k + '0');
-		_putchar(l + '0');
+		_putchar('0' + k);
+		_putchar('0' + l);
 		_putchar(':');
-		_putchar(i + '0');
-		_putchar(j + '0');
+		_putchar('0' + i);
+		_putchar('0' + j);
 		_putchar('\n');
 }
 }
-		return (0)
 }
