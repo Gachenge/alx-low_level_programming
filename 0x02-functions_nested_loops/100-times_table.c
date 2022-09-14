@@ -21,23 +21,22 @@ if (n <= 15 && n >= 0)
 				_putchar(k + '0');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(' ');
 			}
 			else if (k >= 10 && k < 100)
 			{
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
 				_putchar(' ');
-				_putchar(' ');
 			}
 			else if (k >= 100)
 			{
 				_putchar((k / 100) + '0');
 				_putchar(((k / 10) % 10) + '0');
-				_putchar(' ');
 			}
-			if (j < n){
+			if (j < n)
+			{
 				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
