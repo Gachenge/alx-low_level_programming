@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_times_table - print multiplication
- *
+ *@n: input
  * Return:zilch
  */
 
@@ -19,14 +19,11 @@ if (n <= 15 && n >= 0)
 			if (k < 10)
 			{
 				_putchar(k + '0');
-				_putchar(' ');
-				_putchar(' ');
 			}
 			else if (k >= 10 && k < 100)
 			{
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
-				_putchar(' ');
 			}
 			else if (k >= 100)
 			{
@@ -36,6 +33,15 @@ if (n <= 15 && n >= 0)
 			if (j < n)
 			{
 				_putchar(',');
+				_putchar(' ');
+			}
+			if (k < 10)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else if (k >= 10 && k <= 100)
+			{
 				_putchar(' ');
 			}
 		}
