@@ -7,20 +7,31 @@ int main(void)
 		for (int j = 0; j <= 9; j++)
 		{
 			int k = i * j;
-			if (k <10){
+			if (k <10 && j < 9)
+			{
 				putchar(k + '0');
 				 putchar (',');
-                                 putchar('  ');
-
+                                 putchar(' ');
+				 putchar(' ');
 			}
-			else if (k >=10)
+			else if (k < 10 && j == 9)
+			{
+				putchar(k + '0');
+			}
+			else if (k >=10 && j < 9)
 			{
 				putchar((k / 10) + '0');
 				putchar((k % 10) + '0');
 				putchar (',');
-				putchar('  ');
+				putchar(' ');
 			}
+			else if (k >=10 && j ==9)
+			{
+			putchar((k / 10) + '0');
+                       putchar((k % 10) + '0');
+		}
 		}
 		putchar('\n');
 	}
 }
+
