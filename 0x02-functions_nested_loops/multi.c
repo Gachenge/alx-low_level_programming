@@ -9,11 +9,16 @@ int main(void)
 			int k = i * j;
 			if (k <10){
 				putchar(k + '0');
+				 putchar (',');
+                                 putchar('  ');
+
 			}
 			else if (k >=10)
 			{
 				putchar((k / 10) + '0');
 				putchar((k % 10) + '0');
+				putchar (',');
+				putchar('  ');
 			}
 		}
 		putchar('\n');
