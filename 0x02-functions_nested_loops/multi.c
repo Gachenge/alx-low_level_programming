@@ -7,9 +7,15 @@ int main(void)
 		for (int j = 0; j <= 9; j++)
 		{
 			int k = i * j;
-		printf ("%d, ",k);
+			if (k <10){
+				putchar(k + '0');
+			}
+			else if (k >=10)
+			{
+				putchar((k / 10) + '0');
+				putchar((k % 10) + '0');
+			}
 		}
-		printf ("\n");
+		putchar('\n');
 	}
-	return (0);
 }
