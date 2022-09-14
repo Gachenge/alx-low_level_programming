@@ -8,7 +8,16 @@ int main(void)
 	{
 		for (min = 0; min <= 59; min++)
 		{
-		printf ("%02d:%02d\n",hr,min);
+			int i = min / 10;
+			int j = min % 10;
+			int k = hr / 10;
+			int l = hr % 10;
+			putchar(k + '0');
+			putchar(l + '0');
+			putchar(':');
+			putchar(i + '0');
+			putchar(j + '0');
+			putchar('\n');
 		}
 	}
 	return (0);
