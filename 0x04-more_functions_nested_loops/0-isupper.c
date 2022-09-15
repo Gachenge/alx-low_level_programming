@@ -7,16 +7,8 @@
 
 int _isupper(int c)
 {
-	int x;
-
-	if (c >= 'a' && c <= 'z')
-	{
-		x = 0;
-	}
-	else if (c >= 'A' && c <= 'Z')
-	{
-		x = 1;
-	}
-	_putchar('\n');
-	return (x);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }
