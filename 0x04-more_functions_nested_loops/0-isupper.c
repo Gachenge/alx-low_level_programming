@@ -17,5 +17,6 @@ int _isupper(int c)
 	{
 		x = 1;
 	}
+	_putchar('\n');
 	return (x);
 }
