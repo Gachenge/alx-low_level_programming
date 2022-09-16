@@ -9,15 +9,19 @@
 int main(void)
 {
 	long c = 612852475143;
-	int i, x;
+	int i, j, x;
 
-	for (i = 0; i < c; i++)
+	for (i = c/2; i > 1; i--)
 	{
-		if (i % 2 > 0 && i % 3 > 0 && i % 5 > 0 && 1 % 7 > 0)
+		if (c % i == 0)
 		{
+	if ((i % 2 !=0) && (i % 3 !=0) && (i % 5 != 0) && (i %7 !=0))
+					{
+					x = i;
+					}
 		}
-		else if (i % c == 0)
-			x = i;
 	}
-	return (x);
+	printf("%d\n", x);
+	return (0);
 }
+
