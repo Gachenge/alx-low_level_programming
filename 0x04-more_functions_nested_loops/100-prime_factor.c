@@ -13,7 +13,10 @@ int main(void)
 
 	for (i = 0; i < c; i++)
 	{
-		if (i % c == 0)
+		if (i % 2 > 0 && i % 3 > 0 && i % 5 > 0 && 1 % 7 > 0)
+		{
+		}
+		else if (i % c == 0)
 			x = i;
 	}
 	return (x);
