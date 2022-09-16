@@ -10,7 +10,7 @@ void more_numbers(void)
 	int i, j, x, y;
 
 	for (i = 0; i < 11; i++)
-{
+	{
 		for (j = 0; j < 15; j++)
 		{
 			if (j < 10)
@@ -26,5 +26,5 @@ void more_numbers(void)
 			_putchar(y + '0');
 			}
 		_putchar('\n');
-}
+	}
 }
