@@ -19,7 +19,7 @@ void print_number(int n)
 	}
 	else if (n < 10 && n > 0)
 	{
-		_putchar(n +'0');
+		_putchar(n + '0');
 	}
 	else if (n >= 10)
 	{
