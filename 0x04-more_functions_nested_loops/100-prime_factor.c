@@ -9,19 +9,9 @@
 int main(void)
 {
 	long c = 612852475143;
-	int i, x;
+	int i, j;
 
-	for (i = c/2; i > 1; i--)
+	j = c/2;
+	for (i = 2; i <= j; i++)
 	{
-		if (c % i == 0)
-		{
-	if ((i % 2 !=0) && (i % 3 !=0) && (i % 5 != 0) && (i %7 !=0))
-					{
-					x = i;
-					}
-		}
-	}
-	printf("%d\n", x);
-	return (0);
-}
-
+		;:
