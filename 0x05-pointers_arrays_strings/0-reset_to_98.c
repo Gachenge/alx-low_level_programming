@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - changes value of n
- * @*n:pointer
+ * @n:pointer
  * Return: zilch
  */
 
