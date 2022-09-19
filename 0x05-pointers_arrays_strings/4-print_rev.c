@@ -10,17 +10,23 @@ void print_rev(char *s)
 {
 	int i = 0;
 	int length = 0;
-	char temp;
+	char temp, *end, *start;
 
-	while (s[i++])
-	{
-		length++;
+while (*s != '\0')
+{
+	length++;
+	s++;
+}
+for (i = 0; i < length - 1; i++)
+{
+	end++;
 	}
-
-	for (i = length - 1; i >= length / 2; i--)
-	{
-		temp = s[i];
-		s[i] = s[length - i - 1];
-		s[length - i - 1] = temp;
-	}
+	for (i = 0; i < length / 2; i++)
+{
+	temp = *end;
+	*end = *start;
+	*start = temp;
+	start++;
+	end--;
+}
 }
