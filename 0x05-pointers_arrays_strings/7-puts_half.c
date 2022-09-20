@@ -8,24 +8,24 @@
 
 void puts_half(char *str)
 {
-	int n, length;
+	int i, n, length = 0;
 
 	while (*str != '\0')
 	{
 		str++;
 		length++;
 	}
-if (length % 2 == 0)
-{
-	n = length / 2;
-}
-else if (length % 2 != 0)
-{
-	n = (length - 1) / 2;
-}
-for (str = &str[n]; *str != '\0'; str++)
-{
-_putchar(*str);
-}
-_putchar('\n');
+	if (length % 2 == 0)
+	{
+		n = length / 2;
+	}
+	else if (length % 2 != 0)
+	{
+		n = (length - 1) / 2;
+	}
+	for (i = n; i <= length; i++)
+	{
+		_putchar(*str[i]);
+	}
+	_putchar('\n');
 }
