@@ -1,8 +1,9 @@
 #include "main.h"
- /**
-  * leet - ati hauko
+
+/**
+  * leet - mozart music
   * @str: string
-  * Return: music
+  * Return: nothing
   */
 
 char *leet(char *str)
