@@ -1,10 +1,8 @@
 #include "main.h"
  /**
-  * leet(char *) - ati ni mozart
-  * *leet - ati hauko
+  * leet - ati hauko
   * @str: string
   * Return: music
-  * ?
   */
 
 char *leet(char *str)
@@ -18,9 +16,9 @@ char *leet(char *str)
 	{
 		for (j = 0; j <= 5; j++)
 		{
-			if (str[j] == arr[j] || str[j] == arr1[j])
+			if (str[i] == arr[j] || str[i] == arr1[j])
 			{
-				str[j] = eet[j];
+				str[i] = eet[j];
 				break;
 			}
 		}
