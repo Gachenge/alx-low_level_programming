@@ -3,6 +3,7 @@
 /**
  * string_toupper - change to uppercase
  * Return: zic
+ * @str: this string
  * .
  */
 
