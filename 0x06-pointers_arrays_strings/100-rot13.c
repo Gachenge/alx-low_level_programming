@@ -6,12 +6,13 @@
  * Return: always 0
  */
 
-char *rot113(char *str)
+char *rot13(char *str)
 {
 	char arr1[] = "ABCDEFGHIJKLMabcdefghijklm";
-	int i, j;
+	/*char arr2[] = "NOPQRSTUVWXYZnopqrstuvwxyz";*/
+	int j, i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 	{
 		for (j = 0; j < 26; j++)
 		{
@@ -26,6 +27,7 @@ char *rot113(char *str)
 				break;
 			}
 		}
+		i++;
 	}
 	return (str);
 }
