@@ -31,6 +31,8 @@ for (i = 0;  str[i] != '\0'; i++)
 		{
 			str[i] = str[i] - 32;
 		}
+		else
+			continue;
 	}
 }
 	return (0);
