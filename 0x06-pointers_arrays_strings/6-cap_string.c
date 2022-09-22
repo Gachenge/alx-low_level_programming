@@ -26,6 +26,7 @@ for (i = 0;  str[i] != '\0'; i++)
 	}
 	else if (str[i] == '.')
 	{
+		++i;
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - 32;
