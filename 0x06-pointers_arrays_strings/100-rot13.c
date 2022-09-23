@@ -12,7 +12,7 @@ char *rot13(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*(str + i) >= 'a' && *(srt + i) < 'n')
+		if (*(str + i) >= 'a' && *(str + i) < 'n')
 			*(str + i) += 13;
 		else if (*(str + i) >= 'n' && *(str + i) <= 'z')
 			*(str + i) -= 13;
