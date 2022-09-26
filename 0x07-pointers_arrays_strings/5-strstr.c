@@ -3,7 +3,7 @@
 /**
  * _strstr - looks for substring
  * @haystack: where to look
- * @needle what to look for
+ * @needle: what to look for
  * Return: non
  */
 
