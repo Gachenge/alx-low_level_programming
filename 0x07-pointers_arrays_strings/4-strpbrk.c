@@ -21,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	if (accept)
+	if (!accept)
 	{
 		return (s + i);
 	}
