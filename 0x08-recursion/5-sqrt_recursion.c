@@ -2,7 +2,7 @@
 
 /**
  * _sqrt - find sqrt
- * @i: integer
+ * @n: integer
  * @x: number
  * Return: sqrt
  */
