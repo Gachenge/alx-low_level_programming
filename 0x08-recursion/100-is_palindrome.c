@@ -15,9 +15,9 @@ int _pali(char *s, int l, int r)
 	else if (l >= r)
 		return (1);
 	else if (s[l] != s[r])
-		return 0;
+		return (0);
 	else
-		return(_pali(s, l + 1, r - 1));
+		return (_pali(s, l + 1, r - 1));
 }
 
 /**
