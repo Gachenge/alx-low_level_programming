@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print - print all
+ * main - print all
  * @argc: integers
  * @argv: string
  * Return: zero
