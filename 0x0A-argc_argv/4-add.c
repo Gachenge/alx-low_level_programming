@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 /**
  * adder - not the snake
@@ -12,18 +13,10 @@ int main(int argc, char *argv[])
 {
 	int i, sum;
 
-	if (!isdigit(argc))
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
+		sum += atoi(argv[i]);
 	}
-	else if (isdigit(argc))
-	{
-		for (i = 0; i < argc; i++)
-			sum =+ atoi(argv[i]);
-		printf ("%d\n", sum);
-	}
-	else
-		printf("0\n");
+	printf ("%d\n", sum);
 	return (0);
 }
