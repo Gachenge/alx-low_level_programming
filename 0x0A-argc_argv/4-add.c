@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * adder - not the snake
+ * main - not the snake
  * @argc: integers
  * @argv: vector
  * Return: sum
@@ -17,6 +17,6 @@ int main(int argc, char *argv[])
 	{
 		sum += atoi(argv[i]);
 	}
-	printf ("%d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
