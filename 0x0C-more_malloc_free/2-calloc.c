@@ -4,6 +4,7 @@
  * _calloc - malloc arrray
  * @nmemb: members of array
  * @size: how small
+ * Return: nil
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
