@@ -4,7 +4,7 @@
  * int_index - search for sth
  * @array: sth in this array
  * @size: how big array
- * cmp: searcher
+ * @cmp: searcher
  * Return: o
  */
 
