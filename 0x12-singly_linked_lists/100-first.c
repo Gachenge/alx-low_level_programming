@@ -1,11 +1,10 @@
-#include "lists.h"
+#include <stdio.h>
+
+void print_first(void)__attribute__((constructor));
 
 /**
- * print_first - print string before
- *
+ * print_first -print first
  */
-
-void print_first(void) __attribute__ ((constructor));
 
 void print_first(void)
 {
