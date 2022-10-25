@@ -29,6 +29,10 @@ void print_f(va_list f)
 {
 	printf("%f", va_arg(f, double));
 }
+/**
+ * print_str - print string
+ * @s: the string
+ */
 
 void print_str(va_list s)
 {
@@ -37,9 +41,9 @@ void print_str(va_list s)
 	printf("%s", va_arg(s, char*));
 }
 
-/** print_all - print every
+/**
+ * print_all - print everything
  * @format: formater
- * Return: 0
  */
 
 void print_all(const char * const format, ...)
