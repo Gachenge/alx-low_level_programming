@@ -50,7 +50,7 @@ void print_all(const char * const format, ...)
 {
 	int i, j;
 
-	print_t myArray[5] = {
+	print_t myArray[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
