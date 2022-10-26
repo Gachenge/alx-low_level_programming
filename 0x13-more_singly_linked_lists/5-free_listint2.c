@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - free and set head to null
- * @head double pointed
+ * @head: double pointed
  */
 
 void free_listint2(listint_t **head)
