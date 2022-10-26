@@ -31,7 +31,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int i = 0;
 	listint_t *new, *temp;
 
-	if (!h`ead)
+	if (!head)
 		return (NULL);
 	if (index > listlen(head))
 		return (NULL);
