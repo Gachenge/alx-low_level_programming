@@ -30,7 +30,7 @@ unsigned int listlen(listint_t *node)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new, *temp;
-	unsigned int i = 0;
+	unsigned int i = 1;
 
 	if (!*head)
 		return (NULL);
@@ -41,7 +41,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 
 	temp = *head;
-	while (i < (idx - 1))
+	while (i < idx)
 	{
 		temp = temp->next;
 		i++;
