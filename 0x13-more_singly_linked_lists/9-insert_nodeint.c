@@ -8,6 +8,7 @@
 unsigned int listlen(listint_t *node)
 {
 	int count = 0;
+
 	if (!node)
 		count = 0;
 	while (node)
