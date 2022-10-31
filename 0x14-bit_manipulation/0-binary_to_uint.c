@@ -14,7 +14,7 @@ int _len(const char x[])
 	return (i);
 }
 /**
- * binary_to_uint converter
+ * binary_to_uint - converter
  * @b: binary pointer
  * Return: the conversion
  */
@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int i, tot = 0, dec = 1;
 
-	for (i = _len(b)-1; i >= 0; i--)
+	for (i = _len(b) - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
 			tot += dec;
