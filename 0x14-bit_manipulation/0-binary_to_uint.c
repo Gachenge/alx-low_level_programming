@@ -22,6 +22,8 @@ int _len(const char x[])
 unsigned int binary_to_uint(const char *b)
 {
 	int i, tot = 0, dec = 1;
+	if(!b)
+		return(0);
 
 	for (i = _len(b) - 1; i >= 0; i--)
 	{
