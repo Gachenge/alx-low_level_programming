@@ -9,10 +9,10 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int x, count = 0;
+	unsigned int int x, count = 0;
 
 	x = (n ^ m);
-	while (x > 0)
+	while (x)
 	{
 		x = x & (x - 1);
 		count++;
