@@ -1,4 +1,20 @@
 #include "main.h"
+/**
+ * _close - close the open
+ * @opn: open
+ */
+
+void _close(int opn)
+{
+	int err;
+
+	err = close(opn);
+	if (err == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", opn);
+		exit(100);
+	}
+}
 
 /**
  * main - entry point
@@ -6,7 +22,6 @@
  * @argv: argument vector
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	char buff[1024];
@@ -35,8 +50,8 @@ int main(int argc, char *argv[])
 		if (c == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			close(file_from);
-			close(file_to);
+			_close(file_from);
+			_close(file_to);
 			exit(98);
 		}
 		x = write(file_to, buff, c);
@@ -46,9 +61,7 @@ int main(int argc, char *argv[])
 		exit(99);
 		}
 	}
-		close(file_to);
-
-		close(file_from);
-
+		_close(file_to);
+		_close(file_from);
 	return (0);
 }
