@@ -52,9 +52,9 @@ int main(int argc, char *argv[])
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = _buffer(argv[1]);
+	buffer = _buffer(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
+	file_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	c = read(file_from, buffer, 1024);
 
 	do {
