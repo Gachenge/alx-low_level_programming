@@ -54,33 +54,30 @@ int main(int argc, char *argv[])
 	}
 	buffer = _buffer(argv[1]);
 	file_from = open(argv[1], O_RDONLY);
+	file_to = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
 	c = read(file_from, buffer, 1024);
 
-	if (file_from == -1 || c ==-1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		free(buffer);
-		_close(file_from);
-		exit(98);
-	}
-	file_to = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
-	
-	x = write(file_to, buffer, c);
-	if (x == -1 || file_to == -1)
-	{
-		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
-		free(buffer);
-		_close(file_to);
-		exit(99);
-	}
-	file_to = open (argv[2], O_APPEND | O_RDWR, 0664);
-	while (c > 0)
-	{
-		c = read(file_from, buffer, 1024);
+	do {
+		if (file_from == -1 || c == -1)
+		{
+			dprintf(2, "Error: Can't read file %s\n", argv[1]);
+			free(buffer);
+			exit(98);
+		}
+
 		x = write(file_to, buffer, c);
-	}
+		if (file_to == -1 || x == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+		c = read(file_from, buffer, 1024);
+		file_to  = open(argv[2], O_WRONLY | O_APPEND);
+	} while (c > 0);
+
 	free(buffer);
-	_close(file_to);
 	_close(file_from);
+	_close(file_to);
 	return (0);
 }
