@@ -30,7 +30,7 @@ char *_buffer(char *buf)
 
 	if (!buffer)
 	{
-		dprintf(2, "Error: Can't write to %s\n", buffer);
+		dprintf(2, "Error: Can't write to %s\n", buf);
 		exit(99);
 	}
 	return (buffer);
