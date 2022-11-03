@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	c = read(file_from, buffer, 1024);
 
-	if (file_from == -1 || c == -1)
+	if (file_from == -1 || c ==-1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		free(buffer);
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	file_to = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
-
+	
 	x = write(file_to, buffer, c);
 	if (x == -1 || file_to == -1)
 	{
@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
 		_close(file_to);
 		exit(99);
 	}
+	file_to = open (argv[2], O_APPEND | O_RDWR, 0664);
 	while (c > 0)
 	{
 		c = read(file_from, buffer, 1024);
