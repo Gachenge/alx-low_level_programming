@@ -64,10 +64,11 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	file_to = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
+
 	x = write(file_to, buffer, c);
-	if (x == -1 || file_to == -1)
+	if ( x == -1 || file_to == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
 		free(buffer);
 		_close(file_to);
 		exit(99);
@@ -75,11 +76,10 @@ int main(int argc, char *argv[])
 	while (c > 0)
 	{
 		c = read(file_from, buffer, 1024);
-		x = write(file_to, buffer, x);
+		x = write(file_to, buffer, c);
 	}
 	free(buffer);
-	_close(file_from);
 	_close(file_to);
-
+	_close(file_from);
 	return (0);
 }
