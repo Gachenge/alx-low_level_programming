@@ -58,26 +58,23 @@ int main(int argc, char *argv[])
 	c = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
-		c = read(file_from, buffer, 1024);
-		file_to = open(argv[2], O_WRONLY | O_APPEND);
-		x = write(file_to, buffer, c);
-
+	do{
 		if (c == -1 || file_from == -1)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
+		x = write(file_to, buffer, c);
 		if (x == -1 || file_to)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
-	}
-	while (c > 0);
+		c =  read(file_from, buffer, 1024);
+		file_to = open(argv[2], O_WRONLY | O_APPEND);
+	}while (c > 0);
 
 	free(buffer);
 	_close(file_from);
