@@ -2,7 +2,8 @@
 
 /**
  * main - entry
- *
+ * @ac: the count
+ * @av: the vector
  * Return: 0
  */
 int main(int ac, char **av)
