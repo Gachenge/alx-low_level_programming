@@ -11,10 +11,12 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%ld, ", next);
+		printf("%ld", next);
 		j = k;
 		k = next;
 		next = j + k;
+		if (i < 50)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
