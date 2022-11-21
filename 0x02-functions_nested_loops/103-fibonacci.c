@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	int i = 1, j = 2, num,sum = 0;
+	int i = 1, j = 2, num, sum = 0;
 
 	while (i < 4000000)
 	{
-		if (i % 2== 0)
+		if (i % 2 == 0)
 			sum += i;
 		num = i + j;
 		i = j;
