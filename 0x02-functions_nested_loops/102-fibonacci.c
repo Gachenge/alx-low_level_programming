@@ -6,16 +6,15 @@
  */
 int main(void)
 {
-	int i = 1, j = 2, num;
+	long i, j = 0, k = 1;
+	long next = 1;
 
-	while (i < 50)
+	for (i = 1; i <= 50; i++)
 	{
-		printf("%d", i);
-		num = i + j;
-		i = j;
-		j = num;
-		if (i < 50)
-			printf(", ");
+		printf("%ld, ", next);
+		j = k;
+		k = next;
+		next = j + k;
 	}
 	printf("\n");
 	return (0);
