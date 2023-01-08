@@ -3,7 +3,7 @@
 /**
  * key_index - search for key/ value pair index
  * @key: the search topic
- * @size the length of the array
+ * @size: the length of the array
  * Return: the index
  */
 
